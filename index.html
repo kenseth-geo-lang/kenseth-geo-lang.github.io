@@ -3,33 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samburu County Schools Mapping Project</title>
+    <title>Kenseth | Geospatial & Mapping Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
             color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #1a365d;
         }
         h1 {
-            color: #1a365d;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .about-section {
+            background-color: #f7fafc;
+            border-left: 4px solid #3182ce;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
         }
         .map-container {
             margin-top: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
             overflow: hidden;
         }
     </style>
 </head>
 <body>
 
-    <h1>Samburu County Educational Institutions Categorization Map</h1>
-    <p>This interactive layout categorizes educational institutions across Samburu County into primary schools, secondary schools, colleges, and universities using ArcMap spatial analysis.</p>
+    <div class="container">
+        <h1>Kenseth's Geospatial Portfolio</h1>
+        
+        <!-- About Me Section -->
+        <div class="about-section">
+            <h2>About Me</h2>
+            <p>
+                Welcome! I am an undergraduate student pursuing a Bachelor of Arts in Geography, Population, and Environmental Studies at the University of Nairobi. My academic and technical focus centers on Geographic Information Systems (GIS), Remote Sensing, and spatial analysis workflows. 
+            </p>
+            <p>
+                Through my coursework, I have gained hands-on experience dealing with hydrology, regional development challenges in Arid and Semi-Arid Lands (ASALs), and quantitative data analysis methodologies. This portfolio highlights my practical mapping applications and spatial visualization designs.
+            </p>
+        </div>
 
-    <div class="map-container">
-        <!-- This embeds your exact PDF map file on the page -->
-        <iframe src="Samburu_schools_1.pdf" width="100%" height="700px" style="border: none;"></iframe>
+        <!-- Project Section -->
+        <h2>Featured Project: Samburu County Educational Institutions</h2>
+        <p>This layout uses ArcMap to categorize educational institutions across Samburu County by level—distinguishing between primary schools, secondary schools, colleges, and universities. It maps their regional distribution against localized coordinate projections to evaluate infrastructure access.</p>
+
+        <div class="map-container">
+            <!-- Embeds your PDF map file -->
+            <iframe src="Samburu_schools_1.pdf" width="100%" height="750px" style="border: none;"></iframe>
+        </div>
     </div>
 
 </body>
