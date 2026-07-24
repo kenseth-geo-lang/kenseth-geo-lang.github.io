@@ -91,6 +91,29 @@
             border-radius: 8px;
             margin-top: 30px;
         }
+        .dataset-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+        .badge-free {
+            background-color: #38a169;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .badge-paid {
+            background-color: #dd6b20;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
         .btn-action {
             display: inline-block; 
             padding: 12px 28px; 
@@ -102,10 +125,18 @@
             box-shadow: 0 3px 6px rgba(0,0,0,0.1);
             transition: all 0.2s;
             margin-top: 10px;
+            border: none;
+            cursor: pointer;
         }
         .btn-action:hover {
             background-color: #2c5282;
             transform: translateY(-1px);
+        }
+        .btn-pay {
+            background-color: #2f855a;
+        }
+        .btn-pay:hover {
+            background-color: #22543d;
         }
         .project-item {
             margin-bottom: 50px;
@@ -179,13 +210,35 @@
         <!-- Data Repository & Download Panel -->
         <h2 class="section-title">Data Download & Distribution Center</h2>
         <div class="download-panel">
-            <h3>Public Access Spatial Datasets</h3>
-            <p>To support academic research and institutional mapping initiatives, verified spatial asset layers are available for direct digital download below.</p>
+            <h3>Spatial Datasets Repository</h3>
+            <p>To support academic research and institutional mapping initiatives, spatial asset layers are available for direct digital download below.</p>
             
-            <p><strong>Dataset Name:</strong> Samburu County Educational Institutions Infrastructure Layer (Categorized Vector Set)</p>
-            <a href="Samburu_Schools_Shapefile.zip" download class="btn-action">
-                📥 Download Shapefiles Archive (.ZIP)
-            </a>
+            <!-- Dataset 1: Samburu Schools (Free) -->
+            <div class="dataset-card">
+                <h4>
+                    Samburu County Educational Institutions Infrastructure Layer 
+                    <span class="badge-free">FREE</span>
+                </h4>
+                <p>Categorized vector shapefile dataset of primary, secondary, and tertiary academic institutions across Samburu County.</p>
+                <a href="Samburu_Schools_Shapefile.zip" download class="btn-action">
+                    📥 Download Shapefiles Archive (.ZIP)
+                </a>
+            </div>
+
+            <!-- Dataset 2: Kenya Protected Area (Paid - KSH 10) -->
+            <div class="dataset-card" style="border-left: 4px solid #dd6b20;">
+                <h4>
+                    Kenya Protected Areas Vector Spatial Dataset 
+                    <span class="badge-paid">KSH 10</span>
+                </h4>
+                <p>National boundary vector shapefiles covering national parks, game reserves, forest reserves, and conservation zones across Kenya.</p>
+                <p style="font-size: 0.9rem; color: #4a5568;">
+                    <strong>Payment Instructions:</strong> Send <strong>KSh 10</strong> via M-Pesa to <strong>+254794545456</strong>. Click below to download directly or request your download link.
+                </p>
+                <a href="kenya_protected_area.zip" download class="btn-action btn-pay">
+                    💳 Pay KSh 10 & Download (.ZIP)
+                </a>
+            </div>
         </div>
 
         <!-- Operational Project Showcase Section -->
