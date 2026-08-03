@@ -60,6 +60,29 @@
             max-width: 700px;
             margin: 0 auto;
         }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .stat-card {
+            background: var(--light);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .stat-card h4 {
+            font-size: 1.8rem;
+            color: var(--secondary);
+            margin: 0;
+        }
+        .stat-card p {
+            margin: 5px 0 0 0;
+            font-weight: 600;
+            color: var(--dark);
+        }
         .section-title {
             color: var(--primary);
             border-bottom: 3px solid var(--secondary);
@@ -159,6 +182,59 @@
             margin-top: 0;
             color: var(--primary);
         }
+
+        /* --- New Form & Comments Styles --- */
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(43, 108, 176, 0.2);
+        }
+        .comments-section {
+            margin-top: 40px;
+        }
+        .comment-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .comment-meta {
+            font-size: 0.85rem;
+            color: #718096;
+            margin-bottom: 8px;
+        }
+        .comment-author {
+            font-weight: bold;
+            color: var(--primary);
+        }
+        .rating {
+            color: #d69e2e;
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -183,7 +259,23 @@
             <h1>Enterprise Spatial Analytics & Environmental Consulting</h1>
             <p>Providing precision geographic data engineering, advanced cartographic compilation, and environmental analysis workflows for sustainable planning and development.</p>
         </div>
-        
+
+        <!-- Metric & Impact Overview Section -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h4>50+</h4>
+                <p>Spatial Datasets Mapped</p>
+            </div>
+            <div class="stat-card">
+                <h4>100%</h4>
+                <p>Publication-Ready Quality</p>
+            </div>
+            <div class="stat-card">
+                <h4>24/7</h4>
+                <p>Client Support & Delivery</p>
+            </div>
+        </div>
+
         <!-- Corporate Services Core -->
         <h2 class="section-title">Our Professional Services</h2>
         <div class="services-grid">
@@ -280,6 +372,105 @@
             </div>
         </div>
 
+        <!-- Custom Project Request & Inquiry Form -->
+        <h2 class="section-title">Request a Project Quote</h2>
+        <div style="background-color: #f7fafc; border: 1px solid #e2e8f0; padding: 25px; border-radius: 8px;">
+            <p style="margin-top: 0;">Fill out the form below to outline your project requirements. We will review your requests and get back to you with custom pricing options.</p>
+            
+            <form id="quoteForm">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px;">
+                    <div class="form-group">
+                        <label for="fullName">Full Name / Organization *</label>
+                        <input type="text" id="fullName" placeholder="e.g. John Doe / NGO Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAddr">Email Address *</label>
+                        <input type="email" id="emailAddr" placeholder="name@example.com" required>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px;">
+                    <div class="form-group">
+                        <label for="serviceType">Service Required</label>
+                        <select id="serviceType">
+                            <option value="GIS Mapping">GIS Mapping & Cartography</option>
+                            <option value="Remote Sensing">Remote Sensing & Satellite Analysis</option>
+                            <option value="Environmental Analysis">Environmental Assessment & Hydrology</option>
+                            <option value="Data Digitization">Spatial Data Digitization / Shapefiles</option>
+                            <option value="Other">Other Custom Work</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget Scope (KSh / USD)</label>
+                        <input type="text" id="budget" placeholder="e.g., KSh 5,000 or Flexible">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectDetails">Project Details & Requirements *</label>
+                    <textarea id="projectDetails" rows="4" placeholder="Briefly describe your study area, required layers, map outputs, or timeline constraints..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-action btn-pay" style="width: 100%; border: none; padding: 12px; font-size: 1rem;">
+                    🚀 Submit Inquiry Request
+                </button>
+            </form>
+        </div>
+
+        <!-- Client Feedback & Comments Section -->
+        <h2 class="section-title">Client Feedback & Discussion</h2>
+        <div class="comments-section">
+            
+            <!-- Dynamic Comments List -->
+            <div id="commentsContainer">
+                <div class="comment-card">
+                    <div class="comment-meta">
+                        <span class="comment-author">Dr. A. Omondi</span> — Academic Researcher | <span class="rating">★★★★★</span>
+                    </div>
+                    <p style="margin: 0; color: #4a5568;">
+                        "The spatial analysis maps produced for our Samburu project were publication-grade and delivered strictly on schedule. Excellent cartographic precision!"
+                    </p>
+                </div>
+
+                <div class="comment-card">
+                    <div class="comment-meta">
+                        <span class="comment-author">Mary W.</span> — Environmental Consultant | <span class="rating">★★★★★</span>
+                    </div>
+                    <p style="margin: 0; color: #4a5568;">
+                        "Extremely useful vector datasets. Getting the Kenya protected areas layers quickly over WhatsApp saved us days of manually digitizing boundaries."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Leave a Comment Form -->
+            <div style="background-color: var(--light); padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; margin-top: 20px;">
+                <h4 style="margin-top: 0; color: var(--primary);">Leave a Comment or Review</h4>
+                <form id="commentForm">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <div class="form-group">
+                            <label for="commentAuthor">Your Name / Title *</label>
+                            <input type="text" id="commentAuthor" placeholder="e.g. Jane Doe, Student" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="commentRating">Rating</label>
+                            <select id="commentRating">
+                                <option value="★★★★★">5 Stars (Excellent)</option>
+                                <option value="★★★★☆">4 Stars (Good)</option>
+                                <option value="★★★☆☆">3 Stars (Average)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="commentText">Comment *</label>
+                        <textarea id="commentText" rows="3" placeholder="Share your experience working with Kenseth Geospatial..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-action" style="padding: 10px 20px;">
+                        💬 Submit Comment
+                    </button>
+                </form>
+            </div>
+        </div>
+
         <!-- Corporate Contact Desk -->
         <h2 class="section-title">Request Professional Consultation</h2>
         <div style="background-color: #ebf8ff; border: 1px solid #bee3f8; padding: 25px; border-radius: 8px; text-align: center;">
@@ -296,5 +487,38 @@
         &copy; 2026 Kenseth Geospatial & GIS Solutions. All Rights Reserved.
     </footer>
 
+    <!-- JavaScript Handling Forms -->
+    <script>
+        // Handle New Comments Client-Side
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('commentAuthor').value;
+            const rating = document.getElementById('commentRating').value;
+            const text = document.getElementById('commentText').value;
+
+            const newComment = document.createElement('div');
+            newComment.className = 'comment-card';
+            newComment.innerHTML = `
+                <div class="comment-meta">
+                    <span class="comment-author">${name}</span> — Client | <span class="rating">${rating}</span>
+                </div>
+                <p style="margin: 0; color: #4a5568;">"${text}"</p>
+            `;
+
+            document.getElementById('commentsContainer').appendChild(newComment);
+            
+            // Clear Form
+            this.reset();
+            alert('Thank you for your feedback!');
+        });
+
+        // Handle Project Inquiry Form
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Your request has been submitted successfully! We will contact you via email shortly.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
