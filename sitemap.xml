@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
+  
+  <!-- Main Website Landing Page -->
+  <url>
+    <loc>https://kenseth-geo-lang.github.io/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Operational Spatial Cartographic Projects -->
+  <url>
+    <loc>https://kenseth-geo-lang.github.io/Samburu_schools.pdf_1.pdf</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://kenseth-geo-lang.github.io/Samburu_Population_Hotspots.pdf</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kenseth-geo-lang.github.io/Dandora_ward.pdf</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kenseth-geo-lang.github.io/DANDORA_HEALTHFACILITIES.pdf</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
