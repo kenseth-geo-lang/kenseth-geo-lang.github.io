@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Search Console Verification Tag -->
     <meta name="google-site-verification" content="XUrU8XO32t-VZI0_bWDMq40Mj9S7nSlwQFJZkxX1_Zk" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     
     <title>Kenseth Geospatial & GIS Solutions</title>
     <meta name="description" content="Affordable professional GIS mapping, spatial analysis, remote sensing, and environmental consulting services.">
@@ -186,7 +187,7 @@
             color: var(--primary);
         }
 
-        /* --- New Form & Comments Styles --- */
+        /* --- Form & Comments Styles --- */
         .form-group {
             margin-bottom: 15px;
             text-align: left;
@@ -256,14 +257,14 @@
 
     <div class="container">
         
-        <!-- Corporate Hero Branding -->
+        <!-- Hero Section -->
         <div class="hero">
             <img src="Kenseth.png" alt="Kenseth Geospatial Logo">
             <h1>Enterprise Spatial Analytics & Environmental Consulting</h1>
             <p>Providing precision geographic data engineering, advanced cartographic compilation, and environmental analysis workflows for sustainable planning and development.</p>
         </div>
 
-        <!-- Metric & Impact Overview Section -->
+        <!-- Metric Overview Section -->
         <div class="stats-grid">
             <div class="stat-card">
                 <h4>50+</h4>
@@ -279,7 +280,7 @@
             </div>
         </div>
 
-        <!-- Corporate Services Core -->
+        <!-- Services -->
         <h2 class="section-title">Our Professional Services</h2>
         <div class="services-grid">
             <div class="service-card">
@@ -296,19 +297,17 @@
             </div>
         </div>
 
-        <!-- Tailored Solutions for Researchers & NGOs -->
         <div class="client-banner">
             <h3>Custom Mapping for Researchers, NGOs & Academic Institutions</h3>
             <p>Are you an academic researcher, non-governmental organization (NGO), student, or community planner in need of professional, publication-ready GIS maps? We offer high-quality, customized spatial analysis and cartographic design at highly <strong>affordable and flexible rates</strong> tailored to fit project-based research budgets.</p>
         </div>
 
-        <!-- Data Repository & Download Panel -->
+        <!-- Data Downloads -->
         <h2 class="section-title">Data Download & Distribution Center</h2>
         <div class="download-panel">
             <h3>Spatial Datasets Repository</h3>
             <p>To support academic research and institutional mapping initiatives, spatial asset layers are available below.</p>
             
-            <!-- Dataset 1: Samburu Schools (Free) -->
             <div class="dataset-card">
                 <h4>
                     Samburu County Educational Institutions Infrastructure Layer 
@@ -320,7 +319,6 @@
                 </a>
             </div>
 
-            <!-- Dataset 2: Kenya Protected Area (Paid - KSH 10 via WhatsApp) -->
             <div class="dataset-card" style="border-left: 4px solid #dd6b20;">
                 <h4>
                     Kenya Protected Areas Vector Spatial Dataset 
@@ -336,10 +334,9 @@
             </div>
         </div>
 
-        <!-- Operational Project Showcase Section -->
+        <!-- Operational Project Showcase -->
         <h2 class="section-title">Operational Cartographic Project Showcase</h2>
         
-        <!-- Map Project 1: Samburu Schools -->
         <div class="project-item">
             <h3>Project I: Samburu County Educational Institutions Distribution</h3>
             <p>Interactive verification model displaying regional spatial distribution frameworks, educational infrastructure access points, and attribute level classifications across Samburu County.</p>
@@ -348,7 +345,6 @@
             </div>
         </div>
 
-        <!-- Map Project 2: Samburu Population Hotspots -->
         <div class="project-item">
             <h3>Project II: Samburu County Population Hotspots Analysis</h3>
             <p>Spatial analysis and demographic hotspot mapping identifying high-density population concentrations and settlement patterns across Samburu County to aid targeted planning and resource allocation.</p>
@@ -357,7 +353,6 @@
             </div>
         </div>
 
-        <!-- Map Project 3: Dandora Ward -->
         <div class="project-item">
             <h3>Project III: Dandora Ward Urban Boundary & Environmental Spatial Analysis</h3>
             <p>Cartographic spatial framework delineating the administrative boundaries and localized inset spatial orientation of Dandora Ward, Nairobi. Designed to support urban environmental planning, infrastructure mapping, and sustainable solid waste management analysis.</p>
@@ -366,7 +361,6 @@
             </div>
         </div>
 
-        <!-- Map Project 4: Dandora Health Facilities -->
         <div class="project-item">
             <h3>Project IV: Dandora Health Facilities Distribution & Accessibility Analysis</h3>
             <p>Comprehensive healthcare accessibility map detailing public and private health facilities, clinics, and health centers within Dandora Ward, Nairobi to evaluate spatial equity and community health coverage.</p>
@@ -375,27 +369,28 @@
             </div>
         </div>
 
-        <!-- Custom Project Request & Inquiry Form -->
+        <!-- Working Project Quote Form via Formspree -->
         <h2 class="section-title">Request a Project Quote</h2>
         <div style="background-color: #f7fafc; border: 1px solid #e2e8f0; padding: 25px; border-radius: 8px;">
             <p style="margin-top: 0;">Fill out the form below to outline your project requirements. We will review your requests and get back to you with custom pricing options.</p>
             
-            <form id="quoteForm">
+            <!-- Connected Formspree Action Link -->
+            <form action="https://formspree.io/f/xnjeeyzg" method="POST" id="quoteForm">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px;">
                     <div class="form-group">
                         <label for="fullName">Full Name / Organization *</label>
-                        <input type="text" id="fullName" placeholder="e.g. John Doe / NGO Name" required>
+                        <input type="text" name="Full Name / Org" id="fullName" placeholder="e.g. John Doe / NGO Name" required>
                     </div>
                     <div class="form-group">
                         <label for="emailAddr">Email Address *</label>
-                        <input type="email" id="emailAddr" placeholder="name@example.com" required>
+                        <input type="email" name="Email Address" id="emailAddr" placeholder="name@example.com" required>
                     </div>
                 </div>
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px;">
                     <div class="form-group">
                         <label for="serviceType">Service Required</label>
-                        <select id="serviceType">
+                        <select name="Service Requested" id="serviceType">
                             <option value="GIS Mapping">GIS Mapping & Cartography</option>
                             <option value="Remote Sensing">Remote Sensing & Satellite Analysis</option>
                             <option value="Environmental Analysis">Environmental Assessment & Hydrology</option>
@@ -405,13 +400,13 @@
                     </div>
                     <div class="form-group">
                         <label for="budget">Budget Scope (KSh / USD)</label>
-                        <input type="text" id="budget" placeholder="e.g., KSh 5,000 or Flexible">
+                        <input type="text" name="Budget Scope" id="budget" placeholder="e.g., KSh 5,000 or Flexible">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="projectDetails">Project Details & Requirements *</label>
-                    <textarea id="projectDetails" rows="4" placeholder="Briefly describe your study area, required layers, map outputs, or timeline constraints..." required></textarea>
+                    <textarea name="Project Details" id="projectDetails" rows="4" placeholder="Briefly describe your study area, required layers, map outputs, or timeline constraints..." required></textarea>
                 </div>
 
                 <button type="submit" class="btn-action btn-pay" style="width: 100%; border: none; padding: 12px; font-size: 1rem;">
@@ -420,11 +415,9 @@
             </form>
         </div>
 
-        <!-- Client Feedback & Comments Section -->
+        <!-- Comments Section -->
         <h2 class="section-title">Client Feedback & Discussion</h2>
         <div class="comments-section">
-            
-            <!-- Dynamic Comments List -->
             <div id="commentsContainer">
                 <div class="comment-card">
                     <div class="comment-meta">
@@ -445,7 +438,6 @@
                 </div>
             </div>
 
-            <!-- Leave a Comment Form -->
             <div style="background-color: var(--light); padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; margin-top: 20px;">
                 <h4 style="margin-top: 0; color: var(--primary);">Leave a Comment or Review</h4>
                 <form id="commentForm">
@@ -474,7 +466,7 @@
             </div>
         </div>
 
-        <!-- Corporate Contact Desk -->
+        <!-- Contact Desk -->
         <h2 class="section-title">Request Professional Consultation</h2>
         <div style="background-color: #ebf8ff; border: 1px solid #bee3f8; padding: 25px; border-radius: 8px; text-align: center;">
             <h3>Need Custom Spatial Solutions, Academic Maps, or NGO Impact Assessment Reporting?</h3>
@@ -490,9 +482,8 @@
         &copy; 2026 Kenseth Geospatial & GIS Solutions. All Rights Reserved.
     </footer>
 
-    <!-- JavaScript Handling Forms -->
+    <!-- JavaScript Handling Client Comments -->
     <script>
-        // Handle New Comments Client-Side
         document.getElementById('commentForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -510,17 +501,8 @@
             `;
 
             document.getElementById('commentsContainer').appendChild(newComment);
-            
-            // Clear Form
             this.reset();
             alert('Thank you for your feedback!');
-        });
-
-        // Handle Project Inquiry Form
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Your request has been submitted successfully! We will contact you via email shortly.');
-            this.reset();
         });
     </script>
 </body>
