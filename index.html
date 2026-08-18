@@ -106,6 +106,22 @@
             margin-bottom: 25px;
             font-size: 1.6rem;
         }
+        
+        /* Environmental Section Background - Image I (Forest Restoration) */
+        .env-bg-forest {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('image_57f3ca.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 30px;
+            border-radius: 8px;
+            color: #ffffff;
+        }
+        .env-bg-forest .service-card {
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--dark);
+        }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -122,6 +138,27 @@
             margin-top: 0;
             color: var(--primary);
         }
+
+        /* Environmental Banner Background - Image II (Wetland & Watershed Protection) */
+        .client-banner {
+            background-image: linear-gradient(rgba(26, 54, 93, 0.82), rgba(47, 133, 90, 0.82)), url('WhatsApp Image 2026-08-14 at 19.31.26.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-left: 5px solid var(--secondary);
+            padding: 30px 25px;
+            border-radius: 6px;
+            margin: 30px 0;
+            color: #ffffff;
+        }
+        .client-banner h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+        .client-banner p {
+            color: #f7fafc;
+        }
+
         .download-panel {
             background-color: #f0fff4;
             border: 1px solid #c6f6d5;
@@ -185,17 +222,6 @@
             border: 1px solid #e2e8f0;
             border-radius: 8px;
             overflow: hidden;
-        }
-        .client-banner {
-            background-color: #f7fafc;
-            border-left: 5px solid var(--secondary);
-            padding: 20px 25px;
-            border-radius: 6px;
-            margin: 30px 0;
-        }
-        .client-banner h3 {
-            margin-top: 0;
-            color: var(--primary);
         }
 
         /* --- Form & Comments Styles --- */
@@ -291,26 +317,30 @@
             </div>
         </div>
 
-        <!-- Services -->
-        <h2 class="section-title">Our Professional Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Geographic Information Systems (GIS)</h3>
-                <p>Advanced vector spatial processing, coordinate transformations, custom layout classification, and digital mapping solutions tailored to infrastructure assessment.</p>
-            </div>
-            <div class="service-card">
-                <h3>Remote Sensing & Spatial Analysis</h3>
-                <p>Multi-temporal Land Use and Land Cover (LULC) change detection analysis, multi-spectral satellite imagery classification, and demographic distribution modeling.</p>
-            </div>
-            <div class="service-card">
-                <h3>Environmental Studies & Consulting</h3>
-                <p>Sustainable solid waste management analytics, hydrology mapping, watershed delineations, and baseline regional development assessments across urban informal settlements.</p>
+        <!-- Services Section with Afforestation Background -->
+        <div class="env-bg-forest">
+            <h2 class="section-title" style="color: #ffffff; border-bottom-color: #68d391;">Our Professional Services</h2>
+            <p style="margin-bottom: 20px; color: #e2e8f0;">Deploying spatially integrated frameworks to support terrestrial ecosystem monitoring, afforestation planning, and sustainable resource management.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Geographic Information Systems (GIS)</h3>
+                    <p>Advanced vector spatial processing, coordinate transformations, custom layout classification, and digital mapping solutions tailored to infrastructure assessment.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Remote Sensing & Spatial Analysis</h3>
+                    <p>Multi-temporal Land Use and Land Cover (LULC) change detection analysis, multi-spectral satellite imagery classification, and demographic distribution modeling.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Environmental Studies & Consulting</h3>
+                    <p>Sustainable solid waste management analytics, hydrology mapping, watershed delineations, and baseline regional development assessments across urban informal settlements.</p>
+                </div>
             </div>
         </div>
 
+        <!-- Client Banner with Wetland Protection Background -->
         <div class="client-banner">
             <h3>Custom Mapping for Researchers, NGOs & Academic Institutions</h3>
-            <p>Are you an academic researcher, non-governmental organization (NGO), student, or community planner in need of professional, publication-ready GIS maps? We offer high-quality, customized spatial analysis and cartographic design at highly <strong>affordable and flexible rates</strong> tailored to fit project-based research budgets.</p>
+            <p>Dedicated to safeguarding natural water bodies, riparian buffers, and critical ecosystem zones. Are you an academic researcher, non-governmental organization (NGO), student, or community planner in need of professional, publication-ready GIS maps? We offer high-quality, customized spatial analysis and cartographic design at highly <strong>affordable and flexible rates</strong> tailored to fit project-based research budgets.</p>
         </div>
 
         <!-- Data Downloads -->
@@ -333,14 +363,14 @@
             <div class="dataset-card" style="border-left: 4px solid #dd6b20;">
                 <h4>
                     Kenya Protected Areas Vector Spatial Dataset 
-                    <span class="badge-paid">KSH 10</span>
+                    <span class="badge-paid">KSH 10,000</span>
                 </h4>
                 <p>National boundary vector shapefiles covering national parks, game reserves, forest reserves, and conservation zones across Kenya.</p>
                 <p style="font-size: 0.9rem; color: #4a5568;">
-                    <strong>Payment Instructions:</strong> Send <strong>KSh 10</strong> via M-Pesa to <strong>+254794545456</strong>, then click below to verify your payment code and receive the dataset via WhatsApp.
+                    <strong>Payment Instructions:</strong> Send <strong>KSh 10,000</strong> via M-Pesa to <strong>+254794545456</strong>, then click below to verify your payment code and receive the dataset via WhatsApp.
                 </p>
-                <a href="https://wa.me/254794545456?text=Hi%20Kenseth,%20I%20have%20sent%20KSh%2010%20via%20M-Pesa%20for%20the%20Kenya%20Protected%20Areas%20dataset.%20My%20M-Pesa%20transaction%20code%20is:%20" target="_blank" class="btn-action btn-pay">
-                    📲 Pay KSh 10 & Request Download (WhatsApp)
+                <a href="https://wa.me/254794545456?text=Hi%20Kenseth,%20I%20have%20sent%20KSh%2010,000%20via%20M-Pesa%20for%20the%20Kenya%20Protected%20Areas%20dataset.%20My%20M-Pesa%20transaction%20code%20is:%20" target="_blank" class="btn-action btn-pay">
+                    📲 Pay KSh 10,000 & Request Download (WhatsApp)
                 </a>
             </div>
         </div>
