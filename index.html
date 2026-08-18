@@ -107,7 +107,7 @@
             font-size: 1.6rem;
         }
         
-        /* Environmental Section Background - Image I (Forest Restoration) */
+        /* Environmental Section Background - Image I */
         .env-bg-forest {
             background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('IMG_20251125_141240_275.jpg');
             background-size: cover;
@@ -139,7 +139,7 @@
             color: var(--primary);
         }
 
-        /* Environmental Banner Background - Image II (Wetland & Watershed Protection) */
+        /* Environmental Banner Background - Image II */
         .client-banner {
             background-image: linear-gradient(rgba(26, 54, 93, 0.82), rgba(47, 133, 90, 0.82)), url('wetlands.jpeg');
             background-size: cover;
@@ -157,6 +157,40 @@
         }
         .client-banner p {
             color: #f7fafc;
+        }
+
+        /* Featured Photo Showcase Cards */
+        .photo-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 25px 0;
+        }
+        .photo-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+        }
+        .photo-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        .photo-card-body {
+            padding: 20px;
+        }
+        .photo-card-body h4 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        .photo-card-body p {
+            margin-bottom: 0;
+            color: #4a5568;
+            font-size: 0.95rem;
         }
 
         .download-panel {
@@ -317,7 +351,7 @@
             </div>
         </div>
 
-        <!-- Services Section with Afforestation Background -->
+        <!-- Services Section with Background -->
         <div class="env-bg-forest">
             <h2 class="section-title" style="color: #ffffff; border-bottom-color: #68d391;">Our Professional Services</h2>
             <p style="margin-bottom: 20px; color: #e2e8f0;">Deploying spatially integrated frameworks to support terrestrial ecosystem monitoring, afforestation planning, and sustainable resource management.</p>
@@ -337,10 +371,30 @@
             </div>
         </div>
 
-        <!-- Client Banner with Wetland Protection Background -->
+        <!-- Client Banner Section with Background -->
         <div class="client-banner">
             <h3>Custom Mapping for Researchers, NGOs & Academic Institutions</h3>
             <p>Dedicated to safeguarding natural water bodies, riparian buffers, and critical ecosystem zones. Are you an academic researcher, non-governmental organization (NGO), student, or community planner in need of professional, publication-ready GIS maps? We offer high-quality, customized spatial analysis and cartographic design at highly <strong>affordable and flexible rates</strong> tailored to fit project-based research budgets.</p>
+        </div>
+
+        <!-- Dedicated Environmental Photo Gallery Showcase -->
+        <h2 class="section-title">Environmental Fieldwork & Geographic Focus</h2>
+        <div class="photo-showcase-grid">
+            <div class="photo-card">
+                <img src="IMG_20251125_141240_275.jpg" alt="Terrestrial Afforestation & Forest Canopy Restoration">
+                <div class="photo-card-body">
+                    <h4>Terrestrial Ecosystem & Forest Canopy Restoration</h4>
+                    <p>Field survey and spatial monitoring focused on terrestrial reforestation, vegetation density mapping, and canopy cover changes to support ecosystem rehabilitation and climate resilience in Arid and Semi-Arid Lands (ASALs).</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="wetlands.jpeg" alt="Wetland Dynamics & Riparian Buffer Conservation">
+                <div class="photo-card-body">
+                    <h4>Wetland Dynamics & Riparian Zone Protection</h4>
+                    <p>Hydrological mapping and watershed analysis dedicated to monitoring seasonal wetland variations, safeguarding natural water catchments, and analyzing land use impacts along critical river basins and freshwater systems.</p>
+                </div>
+            </div>
         </div>
 
         <!-- Data Downloads -->
