@@ -19,7 +19,7 @@
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     
     <title>Kenseth Geospatial & GIS Solutions</title>
-    <meta name="description" content="Affordable professional GIS mapping, spatial analysis, remote sensing, and environmental consulting services.">
+    <meta name="description" content="Affordable professional GIS mapping, geographic research, spatial analysis, remote sensing, and environmental consulting services.">
     
     <!-- Google Fonts & Font Awesome Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -179,6 +179,37 @@
             flex-wrap: wrap;
         }
 
+        /* Geography Focus Banner */
+        .geography-banner {
+            background: rgba(37, 99, 235, 0.05);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-left: 5px solid var(--accent-blue);
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .geography-banner-icon {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+        }
+
+        .geography-banner h3 {
+            margin: 0 0 6px 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-heading);
+        }
+
+        .geography-banner p {
+            margin: 0;
+            color: #475569;
+            font-size: 0.98rem;
+        }
+
         /* Metric Grid */
         .stats-grid {
             display: grid;
@@ -244,7 +275,7 @@
             margin: 0;
         }
 
-        /* Services Grid */
+        /* Services Grid & Watermarks */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -259,13 +290,32 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
             transition: all 0.2s;
             position: relative;
+            overflow: hidden;
             top: 0;
+            z-index: 1;
         }
 
         .service-card:hover {
             top: -4px;
             box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
             border-color: #cbd5e1;
+        }
+
+        /* Watermark Background Styles */
+        .card-watermark {
+            position: absolute;
+            right: -15px;
+            bottom: -20px;
+            font-size: 8.5rem;
+            color: rgba(15, 23, 42, 0.04);
+            pointer-events: none;
+            z-index: -1;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .service-card:hover .card-watermark {
+            transform: scale(1.08) rotate(-5deg);
+            color: rgba(37, 99, 235, 0.08);
         }
 
         .service-icon {
@@ -294,7 +344,7 @@
             font-size: 0.95rem;
         }
 
-        /* Banner Card */
+        /* Client Banner */
         .client-banner {
             background: linear-gradient(135deg, #059669 0%, #047857 100%);
             color: #ffffff;
@@ -326,7 +376,7 @@
             line-height: 1.6;
         }
 
-        /* Photo Showcase Grid (Includes newly added Local water bodies.webp) */
+        /* Photo Showcase Grid */
         .photo-showcase-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -562,7 +612,7 @@
             box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
 
-        /* Comment Cards */
+        /* Comments Section */
         .comments-section {
             margin-top: 30px;
         }
@@ -634,6 +684,7 @@
             .hero-card { padding: 40px 20px; }
             .navbar { flex-direction: column; gap: 12px; text-align: center; }
             .client-banner { flex-direction: column; text-align: center; }
+            .geography-banner { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -646,7 +697,7 @@
             <span>Kenseth Geospatial</span>
         </a>
         <div class="nav-links">
-            <a href="#services" class="nav-link">Services</a>
+            <a href="#services" class="nav-link">Capabilities</a>
             <a href="#fieldwork" class="nav-link">Fieldwork Focus</a>
             <a href="#repository" class="nav-link">Data Repository</a>
             <a href="#projects" class="nav-link">Cartographic Showcase</a>
@@ -669,6 +720,17 @@
             </div>
         </div>
 
+        <!-- Major in Geography Highlight Banner -->
+        <div class="geography-banner">
+            <div class="geography-banner-icon">
+                <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <div>
+                <h3>Academic Foundation in Geography & Environmental Sciences</h3>
+                <p>Rooted in core principles of <strong>Geography, Population, and Environmental Studies</strong>. We apply fundamental spatial concepts—such as human-environment interactions, demographic standardization, spatial distribution analysis, and regional development frameworks—to deliver academically sound and scientifically rigorous mapping solutions.</p>
+            </div>
+        </div>
+
         <!-- Metric Overview -->
         <div class="stats-grid">
             <div class="stat-card">
@@ -688,28 +750,36 @@
             </div>
         </div>
 
-        <!-- Services Section -->
+        <!-- Technical Capabilities Section with Watermarks -->
         <div id="services">
             <div class="section-header">
                 <h2 class="section-title"><i class="fa-solid fa-layer-group" style="color: var(--accent-blue);"></i> Our Technical Capabilities</h2>
-                <p class="section-subtitle">Deploying spatially integrated frameworks to support terrestrial ecosystem monitoring, afforestation planning, and resource management.</p>
+                <p class="section-subtitle">Integrating geographic principles, spatial analytics, and environmental monitoring for regional development.</p>
             </div>
             
             <div class="services-grid">
+                <!-- Card 1: GIS -->
                 <div class="service-card">
+                    <i class="fa-solid fa-map-location-dot card-watermark"></i>
                     <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
                     <h3>Geographic Information Systems (GIS)</h3>
-                    <p>Advanced vector spatial processing, coordinate transformations, custom layout classification, and digital mapping solutions tailored to infrastructure assessment.</p>
+                    <p>Advanced vector spatial processing, coordinate transformations, spatial join analysis, digitizing, custom layout classification, and digital mapping solutions grounded in physical and human geography.</p>
                 </div>
+
+                <!-- Card 2: Remote Sensing -->
                 <div class="service-card">
+                    <i class="fa-solid fa-satellite-dish card-watermark"></i>
                     <div class="service-icon"><i class="fa-solid fa-satellite"></i></div>
                     <h3>Remote Sensing & Spatial Analysis</h3>
-                    <p>Multi-temporal Land Use and Land Cover (LULC) change detection analysis, multi-spectral satellite imagery classification, and demographic distribution modeling.</p>
+                    <p>Multi-temporal Land Use and Land Cover (LULC) change detection analysis, band compositing, multi-spectral satellite imagery classification (Sentinel-2 & Landsat), and demographic distribution modeling.</p>
                 </div>
+
+                <!-- Card 3: Environmental Consulting -->
                 <div class="service-card">
+                    <i class="fa-solid fa-leaf card-watermark"></i>
                     <div class="service-icon"><i class="fa-solid fa-tree"></i></div>
-                    <h3>Environmental Studies & Consulting</h3>
-                    <p>Sustainable solid waste management analytics, hydrology mapping, watershed delineations, and baseline regional development assessments across urban informal settlements.</p>
+                    <h3>Environmental Consulting & Hydrology</h3>
+                    <p>Sustainable solid waste management analytics, hydrology mapping, watershed delineations, flood frequency analysis, and baseline environmental impact assessments across urban informal settlements and ASAL regions.</p>
                 </div>
             </div>
         </div>
@@ -723,7 +793,7 @@
             </div>
         </div>
 
-        <!-- Environmental Fieldwork Gallery Showcase (Includes Local water bodies.webp) -->
+        <!-- Environmental Fieldwork Gallery Showcase -->
         <div id="fieldwork">
             <div class="section-header">
                 <h2 class="section-title"><i class="fa-solid fa-camera" style="color: var(--accent-blue);"></i> Environmental Fieldwork & Geographic Focus</h2>
@@ -743,7 +813,7 @@
                     </div>
                 </div>
 
-                <!-- Card 2: Local Water Bodies Image (NEWLY ADDED) -->
+                <!-- Card 2: Local Water Bodies Image -->
                 <div class="photo-card">
                     <div class="photo-card-img-wrap">
                         <span class="photo-card-tag">Hydrology</span>
