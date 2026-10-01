@@ -301,21 +301,26 @@
             border-color: #cbd5e1;
         }
 
-        /* Watermark Background Styles */
+        /* Watermark Background Styling */
         .card-watermark {
             position: absolute;
-            right: -15px;
-            bottom: -20px;
-            font-size: 8.5rem;
-            color: rgba(15, 23, 42, 0.04);
+            right: -10px;
+            bottom: -15px;
+            font-size: 7.5rem;
+            color: rgba(15, 23, 42, 0.06);
             pointer-events: none;
-            z-index: -1;
+            z-index: 0;
             transition: transform 0.3s ease, color 0.3s ease;
         }
 
         .service-card:hover .card-watermark {
             transform: scale(1.08) rotate(-5deg);
-            color: rgba(37, 99, 235, 0.08);
+            color: rgba(37, 99, 235, 0.12);
+        }
+
+        .service-card-content {
+            position: relative;
+            z-index: 2;
         }
 
         .service-icon {
@@ -720,7 +725,7 @@
             </div>
         </div>
 
-        <!-- Major in Geography Highlight Banner -->
+        <!-- Geography Focus Banner -->
         <div class="geography-banner">
             <div class="geography-banner-icon">
                 <i class="fa-solid fa-compass-drafting"></i>
@@ -750,7 +755,7 @@
             </div>
         </div>
 
-        <!-- Technical Capabilities Section with Watermarks -->
+        <!-- Technical Capabilities Section with Retained Background Watermark Icons -->
         <div id="services">
             <div class="section-header">
                 <h2 class="section-title"><i class="fa-solid fa-layer-group" style="color: var(--accent-blue);"></i> Our Technical Capabilities</h2>
@@ -761,25 +766,31 @@
                 <!-- Card 1: GIS -->
                 <div class="service-card">
                     <i class="fa-solid fa-map-location-dot card-watermark"></i>
-                    <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
-                    <h3>Geographic Information Systems (GIS)</h3>
-                    <p>Advanced vector spatial processing, coordinate transformations, spatial join analysis, digitizing, custom layout classification, and digital mapping solutions grounded in physical and human geography.</p>
+                    <div class="service-card-content">
+                        <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                        <h3>Geographic Information Systems (GIS)</h3>
+                        <p>Advanced vector spatial processing, coordinate transformations, spatial join analysis, digitizing, custom layout classification, and digital mapping solutions grounded in physical and human geography.</p>
+                    </div>
                 </div>
 
                 <!-- Card 2: Remote Sensing -->
                 <div class="service-card">
                     <i class="fa-solid fa-satellite-dish card-watermark"></i>
-                    <div class="service-icon"><i class="fa-solid fa-satellite"></i></div>
-                    <h3>Remote Sensing & Spatial Analysis</h3>
-                    <p>Multi-temporal Land Use and Land Cover (LULC) change detection analysis, band compositing, multi-spectral satellite imagery classification (Sentinel-2 & Landsat), and demographic distribution modeling.</p>
+                    <div class="service-card-content">
+                        <div class="service-icon"><i class="fa-solid fa-satellite"></i></div>
+                        <h3>Remote Sensing & Spatial Analysis</h3>
+                        <p>Multi-temporal Land Use and Land Cover (LULC) change detection analysis, band compositing, multi-spectral satellite imagery classification (Sentinel-2 & Landsat), and demographic distribution modeling.</p>
+                    </div>
                 </div>
 
                 <!-- Card 3: Environmental Consulting -->
                 <div class="service-card">
                     <i class="fa-solid fa-leaf card-watermark"></i>
-                    <div class="service-icon"><i class="fa-solid fa-tree"></i></div>
-                    <h3>Environmental Consulting & Hydrology</h3>
-                    <p>Sustainable solid waste management analytics, hydrology mapping, watershed delineations, flood frequency analysis, and baseline environmental impact assessments across urban informal settlements and ASAL regions.</p>
+                    <div class="service-card-content">
+                        <div class="service-icon"><i class="fa-solid fa-tree"></i></div>
+                        <h3>Environmental Consulting & Hydrology</h3>
+                        <p>Sustainable solid waste management analytics, hydrology mapping, watershed delineations, flood frequency analysis, and baseline environmental impact assessments across urban informal settlements and ASAL regions.</p>
+                    </div>
                 </div>
             </div>
         </div>
